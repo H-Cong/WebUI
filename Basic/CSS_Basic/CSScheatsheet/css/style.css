@@ -1,0 +1,223 @@
+/* This line below will reset or zero everything */
+/* 
+*{
+	margin: 0;
+	padding: 0;
+} 
+*/
+
+body{
+	background-color: #f4f4f4;
+	color:#555555; /* color is for text color */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold; /* you can also use number here */
+
+	/* The code below will do the same thing as those 3 lines above */
+	/*font: normal 16px Arial, Helvetica, sans-serif;*/
+
+	line-height: 1.6em; /* control the space between lines */
+	margin: 0; /* This get rid of the margin */
+}
+
+/* Use Command+/ to add comment as shorcut*/
+
+/* a will affect all links */
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover{
+	color:red;
+}
+
+a:active{
+	color:green;
+}
+
+a:visited{
+	color:pink;
+}
+
+/* . followed by class name is used to target the class */
+.container {
+	width: 80%;
+	margin: auto; /*This will give even margin at all directions*/
+}
+
+.button{
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+}
+
+.button:hover{
+	background: red;
+	color: #fff;
+}
+
+.clr{
+	clear: both;
+}
+
+.box-1 {
+	background-color: #333333; /* #333 can serve as a shortcut and give the same color. */
+	color: #fff;
+
+	border-right: 5px red solid;
+	border-left: 5px red solid;
+	border-top: 5px red solid;
+	border-bottom: 5px red solid;
+
+	/* the following line will do the same thing */
+	/*border: 5px solid;*/
+
+	border-width: 3px;
+	border-bottom-width: 10px;
+	border-top-style: dotted;
+
+	padding: 20px;
+
+	margin: 20px 0; /* This means the top bottom is 20px wherease the left right is 0 */
+}
+
+.box-1 h1{
+	font-family: Tahoma;
+	font-weight: 800;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	word-spacing: 1em;
+}
+
+.box-2{
+	border: 3px dotted #ccc;
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.categories{
+	border: 1px #ccc solid;
+	padding: 10px;
+	border-radius: 15px; /*This gives the box curved edges*/
+}
+
+.categories h2{
+	text-align: center;
+}
+
+.categories ul{
+	padding: 0;
+	padding-left: 20px;
+	list-style: square;
+	list-style: none;
+}
+
+.categories li{
+	padding-bottom: 6px;
+	border-bottom: dotted 1px #333;
+	list-style-image: url('../images/check.png');
+}
+
+.my-form{
+	padding: 20px;
+}
+
+.my-form .form-group{
+	padding-bottom: 15px; /*This separates the form from each other vertically*/
+}
+
+.my-form label{
+	display: block; /*Make inline elements to be a block so that they will be treated as block to be put in different lines */
+}
+
+.my-form input[type="text"], .my-form textarea{
+	padding: 8px;
+	width: 100%;
+}
+
+ /* This line of code sever as the same as .button, but difference is .my-form only target the button inside my-form , but .button 
+ will apply the change globally */
+/*
+.my-form input[type="submit"]{
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+}
+*/
+
+.block{
+	float: left;
+	width: 33.3%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box; /*This takes in all the extra space used in border and padding and adjust to this 33.3% ratio*/
+}
+
+/* remember # sign is for ID */
+#main-block{
+	float:left;
+	width: 70%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+#sidebar{
+	float:right;
+	width: 30%;
+	background-color: #333;
+	color: #fff;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.p-box{
+	width: 800px;
+	height: 500px;
+	border: 1px solid #000;
+	margin-top:30px;
+	position: relative;
+	background-image: url('../images/bgimage.jpg');
+	background-repeat: no-repeat; 
+	background-position: 100px 200px; 
+	background-position: center top;
+}
+
+.p-box h1{
+	position: absolute;
+	top: 100px;
+	left: 200px;
+}
+
+.p-box h2{
+	position: absolute;
+	bottom: 40px;
+	right: 100px;
+}
+
+/* This fix-me button is useful when you always wanna the user to see a certain element regardless how they scroll the 
+page */
+.fix-me{
+	position: fixed;
+	top:400px;
+}
+
+.my-list li:first-child{
+	background: red;
+}
+
+.my-list li:last-child{
+	background: blue;
+}
+
+.my-list li:nth-child(5){
+	background: yellow;
+}
+
+.my-list li:nth-child(even){
+	background: grey;
+}

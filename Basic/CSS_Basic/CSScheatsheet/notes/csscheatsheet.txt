@@ -1,0 +1,18 @@
+3 Methods For Adding CSS
+	1. Inline CSS: Directly in the html element (NO! Horrible practice!)
+	2. Internal CSS: Using <style> tags within a single document
+	                 This is done by putting style tag in the <head> area
+	3. External CSS: Linking an external .css file (SUGGESTED!)
+			 This is done by using the link tag in the <head> area
+
+Use class or id to target a certain link/element.
+	1. ID is usually used for unique elements, meaning it won't appear anywhere else in your html file or you want to target it separately.
+	2. Class is used when you want to apply the same style somewhere else in your html file. 
+	3. Bootstrap does not use ID, it only has Class.
+
+
+/* comment */ is used for free text comment.
+// will comment any CSS code lines. 
+
+Times New Roman is the default font for most websites.
+

@@ -1,0 +1,169 @@
+<!-- doc type of HTML5, this should always be at top of every HTML5 file -->
+<DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Cheat Sheet</title>
+	</head>
+	<body>
+		<a href="blog.html">Go To Blog</a> <!-- This is how pages are linked together -->
+		<hr>
+		<!-- Headings -->
+		<h1>Heading One</h1>
+		<h2>Heading Two</h2>
+		<h3>Heading Three</h3>
+		<h4>Heading Four</h4>
+		<h5>Heading Five</h5>
+		<h6>Heading Six</h6>
+	
+		<!-- Paragraph -->
+		<p>
+			<em>Lorem ipsum dolor sit amet</em>, <strong> consectetur adipisicing elit </strong>, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<p>
+			<!-- Target="_blank" will open the link in a different page on the browser -->
+			<a href="http://google.com" target="_bland">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<!-- Lists -->
+		<!-- Unordered List -->
+		<ul>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+		</ul>
+
+		<!-- Ordered List -->
+		<ol>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+		</ol>
+
+		<!-- Table -->
+		<!-- Now we use CSS for the layout instead of using table. Table is too Old School -->
+		<table> 
+			<thead> <!-- table heading -->
+				<tr> <!-- table row -->
+					<th>Name</th> <!-- Each heading will have a th tag -->
+					<th>Email</th>
+					<th>Age</th>
+				</tr>>	
+			</thead>>
+			<tbody>
+				<tr> <!-- each tr will give one row -->
+					<td>Jackson</td>> <!-- td stands for table data -->
+					<td>Jackson@Jackson.com</td>
+					<td>20</td>
+				</tr>
+				<tr> 
+					<td>Mark</td>> <!-- td stands for table data -->
+					<td>Mark@Jackson.com</td>
+					<td>21</td>
+				</tr>
+				<tr> 
+					<td>Ethon</td>> <!-- td stands for table data -->
+					<td>ET@Jackson.com</td>
+					<td>40</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br> <!-- line break -->
+		<hr> <!-- add a horizontal line -->
+		<br>
+
+		<!-- Forms -->
+		<form action="process.php" method="POST">
+			<div> <!-- div will put each form imput as a different line since div is a block element -->
+				<label>First Name</label>
+				<input type="text" name="firstName" placeholder="Enter your first name"> <!-- Use camel casw -->
+				<!-- the placeholder text will disappear once you click on that field -->
+			</div>
+			<br>
+			<dir>
+				<label>First Name</label>
+				<input type="text" name="lastName">
+			</dir>
+			<br>
+			<dir>
+				<label>Email</label>
+				<input type="email" name="email"> <!-- email type will check whether the imput is a valid email address -->
+			</dir>
+			<br>
+			<dir>
+				<label>Message</label>
+				<textarea name="email"></textarea>  
+			</dir>
+			<br>
+			<dir>
+				<label>Gender</label>
+				<select name="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select>  
+			</dir>
+			<br>
+			<div>
+				<label>Age:</label>
+				<input type="number" name="age" value="30"> 
+				<!-- the value will give a predifined input -->
+				<!-- this value placeholder is only under HTML5 standard -->
+				<!-- different from the placeholder tag, the value will not disappear if you click on that field -->
+			</div>
+			<br>
+			<div>
+				<label>Birthday:</label>
+				<input type="date" name="birthday">
+			</div>
+			<br>
+			<!-- Add an input button -->
+			<input type="submit" name="submit" value="Submit">
+		</form>
+
+		<!-- Your can also add a button outside of the form by using the botton tag -->
+		<button>Click Me</button>
+		<!-- This button will not do anything unless you use some Javascript -->
+		<!-- Example: <button click="someFunction">Click Me</button> -->
+
+		<br>
+
+		<!-- Image -->
+		<a href="images/sample.jpg">
+			<!-- img is a self-closing tag -->
+			<img src="images/sample.jpg" alt="My sample image is gone" width="200"> 
+			<!-- alt message will be shown if the image is not displayed -->
+			<!-- you can change the image size using width or height="number", but normally this is done by CSS -->
+		</a>
+
+		<!-- Quotations -->
+		<blockquote cite="http://google.com">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</blockquote>
+
+		<!-- abbrevation tag -->
+		<p>The <abbr title="World Wide Web">WWW</abbr> is awesome</p>
+
+		<!-- cite tag -->
+		<p><cite>HTML crash course</cite> by Brad Traversy</p>
+
+		<div style="margin-top:500px"></div> <!-- Add extra space at bottom of the page -->
+	</body>
+</html>

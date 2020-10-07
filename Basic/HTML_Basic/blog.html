@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- you can add this DOCTYPE info just by type html followed by tab button -->
+<!-- you can also type any tag by just type say head followed by the tab button without needing to type < sign first -->
+<html>
+<head>
+	<title>My Blog</title>
+	<!-- Search engine will look those meta info when it scans the website -->
+	<meta name="description" content="Awesome blog by Jackson">
+	<meta name="keywords" content="web design blog, web dev blog, Jackson">
+	<!-- this is just bit CSS used here below -->
+	<!-- # sign represents the id -->
+	<style type="text/css"> 
+		#main-header{
+			text-align: center;
+			background-color: black;
+			color: white;
+			padding: 10px;
+		}
+		#main-footer{
+			text-align: center;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<header id="main-header"> <!-- id will be used to be grabbed in CSS I think -->
+		<h1>My Website</h1>
+	</header>
+
+	<a href="index.html">Go To Index</a> <!-- This is how pages are linked together -->
+
+	<section>
+		<article class="post">
+			<h3>Blog Post One</h3>
+			<small>Posted by Jackson on Sep 18</small> <!-- small tag will add a sort description with small text size -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a href="post.html">Read More</a>
+		</article>
+
+		<article class="post">
+			<h3>Blog Post One</h3>
+			<small>Posted by Jackson on Sep 18</small> <!-- small tag will add a sort description with small text size -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a href="post.html">Read More</a>
+		</article>
+
+		<article class="post">
+			<h3>Blog Post One</h3>
+			<small>Posted by Jackson on Sep 18</small> <!-- small tag will add a sort description with small text size -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a href="post.html">Read More</a>
+		</article>
+	</section>
+	<aside>
+		<h3>Categories</h3>
+		<nav> <!-- you can grab this nav tag in CSS later -->
+			<ul>
+				<li><a href="#">Category 1</a></li>
+				<li><a href="#">Category 2</a></li>
+				<li><a href="#">Category 3</a></li>
+			</ul>
+		</nav>
+	</aside>
+
+	<footer id="main-footer">
+		<p>Copyright &copy; 2017, My Website</p> <!-- &copy will give the copyright sign -->
+	</footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+Inline Elements:
+	1. Do not start on a new line
+	2. Take only the necessary width
+	3. e.g. <span>, <img>, <a>, <strong>, <em>
+
+Block Elements:
+	1. Start on a new line
+	2. Take full width available
+	3. E.g. <div>, <h1> - <h6>, <p>, <form>
+
+Tag Attributes:
+	1. All tags can have attributes
+	2. Provide information about an element
+	3. Placed within the start tag
+	4. Key/value pairs (id="someID")
+	5. Format: <tagname attributename="attributevalue">Content</tagname>
+		   <h1 title="My Company">About Us</h1>
+
+HTML5 Semantic tags
+	1. A semantic element clearly describes its meaning to both the browser and the developer.
+	2. <header></header>, <footer></footer>, <aside></aside>, <main></main>, <article></article>, <nav></nav>,
+	   <section></section>, <details></details>

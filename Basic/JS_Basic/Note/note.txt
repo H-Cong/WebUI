@@ -1,0 +1,281 @@
+JS crush course note:
+
+1. There are 3 types of of variables: var, let, and const
+	a. Var is globally scoped, so you can get a conflict when you use same var name say inside and outside of a if loop. Generally try not to use var.
+	b. Let and const has a block level scope.
+		i. Let value can be re-assigned.
+		ii. Const value can't be changed. And you have to add value when you initialize const variable.
+		iii. Take home msg: always use const unless you are sure that you will re-assign value to a variable. 
+
+2. Commenting
+	a. // used for single line comment
+	b. /* */ used for multi line comment
+
+3. Data types.
+	a. JS includes data types like: String, Number, Boolean, null, undefined, and Symbol. 
+	b. String:
+		i. String can have "" or ''. e.g. const name = 'John';
+		ii. You can add ; (semi-colon) at the end of each code line. It is not mandatory. However, it is a recommended syntax practice. 
+	c. Numbers:
+		i. const age = 30;
+		ii. const rating = 4.5; Note: There is no float type number in JS.
+	d. Boolean:
+		i. const isCool = true;
+	e. null:
+		i. const x = null;
+	f. undefined:
+		i. const y = undefined;
+		ii. let z;
+	g. You can check the data type using typeof varName, e.g. console.log(typeof varName); 
+
+4. Concatenation
+	const name = 'John';
+	const age = 30;
+	// old way of concatenation
+	console.log('My name is ' + name + ' and I am ' + age);
+	// Template String
+	console.log(`My name is ${name} and I am ${age}`);
+
+5. String functions
+	const s = 'Hello World!';
+	console.log(s.length);  // Output will be 12
+	console.log(s.toUpperCase()); // Output HELLO WORLD!
+	console.log(s.substring(0, 5).toUpperCase()); // Output HELLO
+	
+	const s = 'technology, computers, it, code';
+	console.log(s.split(', ')); // Output ["technology", "computer", "it", "code"]
+
+6. Arrays
+	a. Arrays are variables that hold multiple values
+	b. const numbers = new Array(1, 2, 3, 4, 5);
+	   console.log(numbers); // Output [1, 2, 3, 4, 5]
+	   OR
+	   const fruits = ['apples', 'oranges', 'pears', 10, true]; // JS let the array constrcted with different data types
+	c. Functions
+	   const fruits = ['apples', 'oranges', 'pears'];
+	   console.log(fruits[1]); // Output oranges as index is 0-based
+	   fruits[3] = 'grapes'; // Even fruits is const, you can still add elements to array
+	   fruits.push('mangos'); // Push new element to end of array
+	   fruits.unshift('kiwi'); // Add new element at beginning
+	   fruits.pop(); // pop the last element
+	   console.log(Array.isArray(fruits)); // Output true
+	   console.log(fruits.indexOf('oranges')); // Output the index
+
+7. Object literal (basically just key-value pairs)
+	const person = {
+	  firstnName: 'John',
+	  lastName: 'Doe',
+	  age: 30,
+	  hobbies: ['music', 'movies', 'sports'],
+	  address: {
+	     street: '50 main st',
+	     city: 'Boston',
+	     state: 'MA'
+	  }
+	}
+	
+	console.log(person.firstName, person.lastName);
+	console.log(person.hobbies[1]); // Output movies
+	console.log(person.adddress.city); // Output Boston
+
+	const {firstName, lastName, address: {city}} = person; // pull out certain properties from the object
+	console.log(city); // Output Boston
+	
+	person.email = 'join@gmail.com';
+	console.log(person); // You will see email has been added to person as new property
+
+8. Deal array of objects
+	const todos = [
+	  {
+	    id: 1,
+	    text: 'Take out trash',
+	    isCompleted: true
+	  },
+	  {
+	    id: 2,
+	    text: 'Meeting with boss',
+	    isCompleted: true
+	  },
+	  {
+	    id: 3,
+	    text: 'Dental appt',
+	    isCompleted: false
+	  }
+	];
+
+	console.log(todos[1].text); // Meeting with boss
+
+	const todoJSON = JSON.stringify(todos);
+	console.log(todoJSON); // This will convert the array of objects to JSON format
+
+	// For loop
+	for(let i = 0; i < 10; i++) {
+	  console.log(`For Loop Number: ${i}`);
+	}
+	// While loop
+	let i = 0;
+	while(i < 10) {
+	  console.log(`For Loop Number: ${i}`);
+	  i++;
+	}
+	
+	for(let i = 0; i < todos.length; i++) {
+	  console.log(`For Loop Number: ${i}`);
+	}
+
+	for(let i = 0; i < todos.length; i++) {
+	  console.log(todos[i]);
+	}
+
+	// For of loop
+	for(let todo of todos) {
+	  console.log(todo.text);
+	}
+
+	// High order array method iteration of arrays: forEach, map, filter
+	// forEach
+	todos.forEach(functionn(todo) {
+	  console.log(todo.text);
+	});
+	// map
+	const todoText = todos.map(functionn(todo) {
+	  return todo.text;
+	});
+	console.log(todoText);
+	// filter
+	const todoCompleted = todos.map(functionn(todo) {
+	  return todo.isCompleted === true;
+	});
+	console.log(todoCompleted);
+	// combine filter with map
+	const todoCompleted = todos.map(functionn(todo) {
+	  return todo.isCompleted === true;
+	}).map(function(todo) {
+	  return todo.text;
+	}); // this is an example of functional programming to manupilating data
+	console.log(todoCompleted);
+
+9. Conditional
+	const x = 10;
+	if(x == 10) {
+	  console.log('x is 10');
+	} else if (x > 10) {
+	  console.log('x is greater than 10');
+	} else {
+	  console.log('x is less than 10');
+	}
+
+	== only match the data value not the data type
+	=== will match both the data value and data type
+
+	OR: ||
+	AND: &&
+
+10. Ternary operator
+	const x = 10;
+	const color = x > 10 ? 'red' : 'blue';  // ? = then  : = else
+	console.log(color); // Output blue
+	
+	switch(color) {
+	  case 'red':
+	    console.log('color is red');
+	    break;
+	  case 'red':
+	    console.log('color is blue');
+	    break;
+	  default:
+	    console.log('color is not red or blue');
+	    break;
+	}
+
+11. Functions
+	function addNums(num1 = 1, num2 = 1) {
+	  return num1 + num2;
+	}
+
+	console.log(addNums(5, 4)); // Output 9
+
+	// arrow message
+	const addNums = (num1 = 1, num2 = 1) => num1 + num2;
+	console.log(addNums(5, 4)); // Output 9
+
+	// another example 
+	todos.forEach((todo) => console.log(todo));
+
+	// this keyword??
+
+12. Contructive function (The function name should start with capital)
+	// Constructor function
+	function Person(firstName, lastName, dob) {
+	  this.firstName = firstName;
+	  this.lastName = lastName;
+	  this.dob = new Date(dob);
+	}
+	// Instantiate object
+	const person1 = new Person('John', 'Doe', '4-3-1980');
+	const person2 = new Person('Mary', 'Smith', '3-6-1970');
+
+	console.log(person1);
+	console.log(person2.firstName);
+	console.log(person2.dob); // by using new Date() you set the dob as Date object, and you will get natural date object.
+	console.log(person2.dob.getFullYear()); // Output 1970
+
+	// Example 2: Create function inside constructor function
+	function Person(firstName, lastName, dob) {
+	  this.firstName = firstName;
+	  this.lastName = lastName;
+	  this.dob = new Date(dob);
+	  this.getBirthYear = function() {
+	    return this.dob.getFullYear();
+	  }
+	  this.getFullName = function() {
+	    return `${this.firstName} ${this.lastName}`;
+	  }
+	}
+	
+	console.log(person1.getBirthYear()); // Output 1980
+	console.log(person1.getFullName()); // Output John Doe
+	
+	// rewrite the above functions with prototype
+	function Person(firstName, lastName, dob) {
+	  this.firstName = firstName;
+	  this.lastName = lastName;
+	  this.dob = new Date(dob);
+	}
+	Person.prototype.getBirthYear = function() {
+	  return this.dob.getFullYear();
+	}
+	Person.prototype.getFullName = function() {
+	  return `${this.firstName} ${this.lastName}`;
+	}
+	
+	const person1 = new Person('John', 'Doe', '4-3-1980');
+	const person2 = new Person('Mary', 'Smith', '3-6-1970');
+
+	console.log(person2.getFullName());
+	console.log(person1);
+
+13. Class
+	class Person {
+	  constructor(firstName, lastName, dob) {
+	    this.firstName = firstName;
+	    this.lastName = lastName;
+	    this.dob = new Date(dob);
+	  }
+	
+	  getBirthYear() {
+	    return this.dob.getFullYear();
+	  }
+	
+	  getFullName() {
+	    return `${this.firstName} ${this.lastName}`;
+	  }
+	}
+
+	const person1 = new Person('John', 'Doe', '4-3-1980');
+	const person2 = new Person('Mary', 'Smith', '3-6-1970');
+
+	console.log(person2.getFullName());
+	console.log(person1);
+
+14. DOM
